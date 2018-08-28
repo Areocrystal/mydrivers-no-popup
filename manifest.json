@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "干掉蛆家闲置弹窗",
+  "version": "0.0.3",
+  "description": "蛆家讨厌的闲置弹窗删除插件",
+  "browser_action": {
+    "default_icon": "static/img/kkg.png",
+    "default_title": "干掉蛆家闲置弹窗",
+    "default_popup": "static/popup.html"
+  },
+  "icons": {
+    "16": "static/img/1.png",
+    "32": "static/img/1.png",
+    "48": "static/img/1.png",
+    "128": "static/img/1.png"
+  },
+  "permissions": [
+    "tabs",
+    "http://news.mydrivers.com/*",
+    "https://news.mydrivers.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://news.mydrivers.com/*",
+        "https://news.mydrivers.com/*"
+      ],
+      "js": ["./core.min.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

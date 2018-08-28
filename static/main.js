@@ -1,0 +1,1 @@
+!function(win,doc){var first=doc.querySelector(".moonie-main>li:first-of-type"),last=doc.querySelector(".moonie-main>li:last-of-type"),ite=function(a,b){a.addEventListener("animationiteration",function(){this.style.animationPlayState="paused",b.style.animationPlayState="running"})};ite(first,last),ite(last,first)}(window,document);

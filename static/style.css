@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+body .moonie-main {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+body .moonie-main > li {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, purple 33%, azure 67%, gold);
+    box-sizing: border-box;
+}
+body .moonie-main > li:first-of-type {
+    animation: first 1s linear infinite  alternate backwards;
+}
+body .moonie-main > li:last-of-type {
+    animation: last 1s linear infinite alternate backwards paused;
+}
+@keyframes first {
+    from {
+        transform: none;
+    }
+    50% {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(1px);
+    }
+}
+@keyframes last {
+    from {
+        transform: none;
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    to {
+        transform: none;
+    }
+}
